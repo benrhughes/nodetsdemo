@@ -7,7 +7,7 @@ export default class Server {
   constructor() {
     this.app = express();
     this.registerRoutes();
-    this.data = {};
+    this.data = { 'Fred': 'Hello Fred'};
   }
 
   public start(){

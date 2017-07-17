@@ -8,14 +8,20 @@ This is a very simple project demonstrating how to set up a web server using nod
 - npm install 
 - ./node_modules/typescript/bin/tsc 
 - node dist/index.js
-- browse http://localhost:8080/Fred
+- browse http://localhost:8080/user/Fred
 
 ## Overview
 
 ### index.ts
 The entrypoint to the server. It basically just instantiates a Server and starts it.
 ### server.ts
-A class encapsulating the configuation of the API. It constructs an express app and registers a single route, and provides a public method for starting the express app.
+A class encapsulating the configuation of the API. It constructs an express app and provides a public method for starting the express app.
+
+It registers 3 routes:
+- `GET /user` to list known users
+- `GET /user/:name/` to get a user
+- `POST /user/:name/` to create a user
+
 ### package.json
 The npm config file that holds information about this package, including its depencencies. `npm install` uses this to install dependencies, including the typescript compiler (`tsc`), and the type files that it (and an IDE like VS Code) require.
 ### tsconfig.json
