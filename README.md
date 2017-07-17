@@ -13,7 +13,7 @@
 ### index.ts
 The entrypoint to the server. It basically just instantiates a Server and starts it.
 ### server.ts
-A class encapsulating the configuation of the API. 
+A class encapsulating the configuation of the API. It constructs an express app and registers a single route, and provides a public method for starting the express app.
 ### package.json
 The npm config file that holds information about this package, including its depencencies. `npm install` reads this file to determine what components need to be installed. This includes the installation of the typescript compiler, and the type files that it (and an IDE like VS Code) require.
 ### tsconfig.json
