@@ -1,4 +1,4 @@
-# Super simple nodejs typescript demo
+# Super simple nodejs + typescript API demo
 This is a very simple project demonstrating how to set up a web server using nodejs and typescript. 
 
 ## Get it running
