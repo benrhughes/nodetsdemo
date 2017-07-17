@@ -2,6 +2,7 @@
 
 ## Get it running
 - have node installed
+- clone this repo
 - cd \<repository\>
 - npm install 
 - ./node_modules/typescript/bin/tsc 
