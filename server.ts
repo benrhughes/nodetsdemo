@@ -15,11 +15,11 @@ export default class Server {
   }
 
   private registerRoutes() {
-    this.app.get('/user', (req, res) =>{
+    this.app.get('/users', (req, res) =>{
       return res.json(Object.keys(this.data));
     });
 
-    this.app.get('/user/:name', (req, res) => {
+    this.app.get('/users/:name', (req, res) => {
       var name = req.params['name'];
       if(this.data[name])
         return res.json(this.data[name]);
@@ -27,7 +27,7 @@ export default class Server {
         return res.sendStatus(404);
     })
 
-    this.app.post('/user/:name', (req, res) => {
+    this.app.post('/users/:name', (req, res) => {
       var name = req.params['name'];
       this.data[name] = 'Hello ' + name;
       res.setHeader('location', '/user/'+ name);
