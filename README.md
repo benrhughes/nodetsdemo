@@ -17,18 +17,11 @@ The entrypoint to the server. It basically just instantiates a Server and starts
 ### server.ts
 A class encapsulating the configuation of the API. It constructs an express app and provides a public method for starting the express app.
 
-<<<<<<< HEAD
 It registers 4 routes:
 - `GET /users` to list known users
 - `GET /users/:name/` to get a user
 - `POST /users/:name/` to create a user
 - `DELETE /users/:name/` to delete a user
-=======
-It registers 3 routes:
-- `GET /users` to list known users
-- `GET /users/:name/` to get a user
-- `POST /users/:name/` to create a user
->>>>>>> b5034df32b2f08d1ccd78da9e416e03df2078715
 
 It has a commented out line to inject the headerFilter middleware.
 
