@@ -38,5 +38,14 @@ export default class Server {
       res.setHeader('location', '/users/'+ name);
       return res.sendStatus(201);
     });
+
+    this.app.delete('/users/:name', (req, res) =>{
+      var name = req.params['name'];
+      if(!this.data[name])
+        return res.sendStatus(404);
+
+      delete this.data[name];
+      return res.sendStatus(204);
+    });
   }
 }

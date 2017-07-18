@@ -5,5 +5,5 @@ export function headerFilter(req: Request, res: Response, next: NextFunction ){
         return next();
         
     res.statusCode = 400;
-    res.json({msg: "customHeader missing"});
+    return res.json({msg: "customHeader missing"});
 }
