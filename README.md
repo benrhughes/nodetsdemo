@@ -8,7 +8,7 @@ This is a very simple project demonstrating how to set up a web server using nod
 - npm install 
 - ./node_modules/typescript/bin/tsc 
 - node dist/index.js
-- browse http://localhost:8080/user/Fred
+- browse http://localhost:8080/users
 
 ## Overview
 
