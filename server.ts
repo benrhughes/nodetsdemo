@@ -30,7 +30,7 @@ export default class Server {
     this.app.post('/users/:name', (req, res) => {
       var name = req.params['name'];
       this.data[name] = 'Hello ' + name;
-      res.setHeader('location', '/user/'+ name);
+      res.setHeader('location', '/users/'+ name);
       return res.sendStatus(201);
     });
   }
