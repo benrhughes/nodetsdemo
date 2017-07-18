@@ -22,6 +22,11 @@ It registers 3 routes:
 - `GET /user/:name/` to get a user
 - `POST /user/:name/` to create a user
 
+It has a commented out line to inject the headerFilter middleware.
+
+### middleware/headerFilter.ts
+This is a simple middleware filter that checks for the existence of a header called 'customHeader' on every request, and 400s if it does not exist. 
+
 ### package.json
 The npm config file that holds information about this package, including its depencencies. `npm install` uses this to install dependencies, including the typescript compiler (`tsc`), and the type files that it (and an IDE like VS Code) require.
 ### tsconfig.json

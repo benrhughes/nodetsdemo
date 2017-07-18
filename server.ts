@@ -1,4 +1,5 @@
 import * as express from "express";
+import {headerFilter} from './middleware/headerFilter';
 
 export default class Server {
   private app: express.Application;
@@ -6,6 +7,10 @@ export default class Server {
 
   constructor() {
     this.app = express();
+
+    // uncomment the following line to enable the headerFilter middleware
+    // this.app.use(headerFilter);
+
     this.registerRoutes();
     this.data = { 'Fred': 'Hello Fred'};
   }
